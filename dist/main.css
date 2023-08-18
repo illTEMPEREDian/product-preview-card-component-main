@@ -109,15 +109,16 @@ Button
   border-radius: 0.5rem;
   padding: 1rem 1.5rem;
   transition: 300ms ease-in-out;
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary);
+  line-height: 1.06rem;
   cursor: pointer;
 }
 .btn:is(:hover, :focus) {
   background: var(--hov-accent);
 }
-.btn .btn__text {
-  font-weight: var(--fw-bold);
-  color: var(--clr-primary);
-  line-height: 1.06rem;
+.btn .cart__btn {
+  align-self: end;
 }
 
 /*
@@ -187,7 +188,9 @@ General styling
 .row .flex-content .cart__btn {
   align-self: end;
 }
-.row .flex-content .cart__btn::before {
-  content: url(/images/icon-cart.svg);
-  height: 1rem;
+.row .flex-content .btn[data-icon=shopping-cart]::before {
+  content: "";
+  background-image: url(../images/icon-cart.svg);
+  height: 16px;
+  width: 15px;
 }
