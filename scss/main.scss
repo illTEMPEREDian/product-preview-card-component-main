@@ -108,7 +108,7 @@ Button
 */
 .btn {
   display: flex;
-  gap: .75rem;
+  gap: 0.75rem;
   justify-content: center;
   align-items: center;
   max-height: 3rem;
@@ -117,14 +117,15 @@ Button
   border-radius: 0.5rem;
   padding: 1rem 1.5rem;
   transition: 300ms ease-in-out;
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary);
+  line-height: 1.06rem;
   cursor: pointer;
   &:is(:hover, :focus) {
     background: var(--hov-accent);
   }
-  .btn__text {
-    font-weight: var(--fw-bold);
-    color: var(--clr-primary);
-    line-height: 1.06rem;
+  .cart__btn {
+    align-self: end;
   }
 }
 /*
@@ -154,7 +155,10 @@ General styling
   .flex-content {
     display: grid;
     gap: 1rem;
-     padding: 1.5rem; 
+    padding: 1.5rem;
+    // &:last-child {
+    //   align-content: end;
+    // }
     @media screen and (min-width: 600px) {
       padding: clamp(1.5rem, 10.67%, 5rem);
     }
@@ -186,10 +190,12 @@ General styling
     }
     .cart__btn {
       align-self: end;
-      &::before {
-        content: url(/images/icon-cart.svg);
-        height: 1rem;
-      }
+    }
+    .btn[data-icon="shopping-cart"]::before {
+      content: "";
+      background-image: url(../images/icon-cart.svg);
+      height: 16px;
+      width: 15px;
     }
   }
 }
