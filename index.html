@@ -29,37 +29,39 @@
     <div class="wrapper">
 
 
-        <article class="product row">
-          <div class="col flex-image">
-            <picture class="product__img">
-
-            </picture>
+      <article class="product row">
+        <div class="col flex-image">
+          <!-- Uses markup to display different images at set width!!! -->
+          <picture class="product__img">
+            <source srcset="/images/image-product-desktop.jpg" media="(min-width: 600px)">
+            <img src="images/image-product-mobile.jpg" alt="">
+          </picture>
+        </div>
+        <div class="col flex-content">
+          <p class="product__category">Perfume</p>
+          <h1 class="product__title">Gabrielle Essence Eau De Parfum</h1>
+          <p class="product__description">A floral, solar and voluptuous interpretation composed by Olivier Polge,
+            Perfumer-Creator for the House of CHANEL.</p>
+          <div class="product__price flex-price">
+            <p class="product__price-sale">
+              <span class="visually-hidden">Sale Price:</span>
+              $149.99
+            </p>
+            <p class="product__price-original">
+              <span class="visually-hidden">Original Price:</span>
+              $169.99
+            </p>
           </div>
-          <div class="col flex-content">
-            <p class="product__category">Perfume</p>
-            <h1 class="product__title">Gabrielle Essence Eau De Parfum</h1>
-            <p class="product__description">A floral, solar and voluptuous interpretation composed by Olivier Polge,
-              Perfumer-Creator for the House of CHANEL.</p>
-            <div class="product__price flex-price">
-              <p class="product__price-sale">
-                <span class="visually-hidden">Sale Price:</span>
-                $149.99
-              </p>
-              <p class="product__price-original">
-                <span class="visually-hidden">Original Price:</span>
-                $169.99
-              </p>
-            </div>
-            <button class="btn cart__btn">
-              <div class="btn__text">Add to Cart</div>
-            </button>
-          </div>
-        </article>
+          <button class="btn cart__btn">
+            <div class="btn__text">Add to Cart</div>
+          </button>
+        </div>
+      </article>
 
   </main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Ian Allen</a>.
+    Coded by <a href="https://illtemperedian.github.io/product-preview-card-component-main/">Ian Allen</a>.
   </div>
   </div>
 </body>

@@ -151,14 +151,6 @@ General styling
       max-width: 300px;
     }
   }
-  .flex-image {
-    .product__img {
-    content: url(/images/image-product-mobile.jpg);
-    @media screen and (min-width: 600px) {
-      content: url(/images/image-product-desktop.jpg);
-    }
-  }
-  }
   .flex-content {
     display: grid;
     gap: 1rem;
