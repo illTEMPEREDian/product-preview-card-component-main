@@ -198,3 +198,8 @@ General styling
   height: 16px;
   width: 15px;
 }
+
+footer {
+  position: sticky;
+  background: var(--clr-primary);
+}
